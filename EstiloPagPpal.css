@@ -3,6 +3,17 @@ h1{
 }
 
 .portada{
-    color: white;
-    size: 25px;
+    color: rgb(249, 254, 254);
+    /*size: 25px;*/
 }
+
+.zoom{
+    /* Aumentamos la anchura y altura durante 2 segundos */
+    transition: width 2s, height 2s, transform 1s;
+}
+.zoom:hover{
+    /* tranformamos el elemento al pasar el mouse por encima al doble de
+       su tamaño con scale(2). */
+    transform : scale(2);
+}
+
