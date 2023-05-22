@@ -8,19 +8,69 @@
     <title>ARGENTINA TRAVEL CO.</title>
     <link rel="shortcut icon" href="logo1.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="Menu.css">
-    <link rel="stylesheet" type="text/css" href="Galeria.js">
+    <link rel="stylesheet" type="text.css" href="Galeria.css">
+
+    <script>
+        function startTime() {
+            today = new Date();
+            h = today.getHours();
+            m = today.getMinutes();
+            s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('reloj').innerHTML = h + ":" + m + ":" + s;
+            t = setTimeout('startTime()', 500);
+        }
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+    </script>
+    <script>
+        function mostrarFecha() {
+            var fechaActual = new Date();
+            var opcionesFecha = { year: 'numeric', month: 'long', day: 'numeric' };
+            var fechaFormateada = fechaActual.toLocaleDateString('es-ES', opcionesFecha);
+            document.getElementById("fecha").innerHTML = fechaFormateada;
+        }
+    </script>
+    
 </head>
 
-<body style="background-color: rgb(234, 234, 213);">
-    <div>
+<body onload="mostrarFecha(); startTime()" style="background-color: rgb(234, 234, 213); ">
+    <div class="cabezal">
         <img src="logo1.jpg" alt="LOGO" width="250" height="150" style="float: left;">
-        <br>
-        <br>
-        <h1 style="scale: 1,3; font-family: 'Lucida Sans'; text-align: center; background-image: url(arg.jpg);"> ¡TUS
-            PROXIMAS VACACIONES ESTAN AQUI! </h1>
+        <div>
+            <h1 style="scale: 2,5; font-family: 'Lucida Sans'; text-align: center;">
+                ¡TUS PROXIMAS VACACIONES ESTAN AQUI! </h1>
+        </div>
+    </div>
+    <div class="datos fecha" style="font-size: 25px;">
+        <div id="fecha">
+        </div>
+        <div id="reloj">
+        </div>
+        <div id="contador">
+            <script>
+                var ran
+                ran = Math.round(Math.random() * 50000)
+                document.write("Visitante N°:")
+                document.write(ran)
+            </script>
+        </div>
+        <div id="reproductor">
+            <audio controls autoplay>
+                <source src="Pagina.mp3">
+            </audio>
+        </div>
     </div>
 
-    <br>
+
+
+
+
     <header>
         <div class="container">
             <p class="logo"> </p>
@@ -35,20 +85,20 @@
             </ul>
         </div>
     </header>
-<h2> Cumple tus sueños</h2>
-<div class="galeria">
-    <ul>
-        <li>
-            <img src="imagen-brasil.jpg">
-        </li>
-        <li>
-            <img src="imagen-egipto.jpg">
-        </li>
-        <li>
-            <img src="imagen-safari.jpg">
-        </li>
-    </ul>
-</div>
+    <h2> Cumple tus sueños</h2>
+    <div class="galeria">
+        <ul>
+            <li>
+                <img src="imagen-brasil.jpg">
+            </li>
+            <li>
+                <img src="imagen-egipto.jpg">
+            </li>
+            <li>
+                <img src="imagen-safari.jpg">
+            </li>
+        </ul>
+    </div>
 </body>
 
 </html>
