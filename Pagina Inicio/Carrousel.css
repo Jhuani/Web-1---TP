@@ -1,0 +1,35 @@
+.carousel {
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel__content {
+    display: flex;
+    overflow: hidden;
+}
+
+.carousel__content img {
+    width: 100%;
+}
+
+.carousel__prev,
+.carousel__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.carousel__prev {
+    left: 10px;
+}
+
+.carousel__next {
+    right: 10px;
+}

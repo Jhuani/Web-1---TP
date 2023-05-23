@@ -8,7 +8,8 @@
     <title>ARGENTINA TRAVEL CO.</title>
     <link rel="shortcut icon" href="logo1.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="Menu.css">
-    <link rel="stylesheet" type="text.css" href="Galeria.css">
+
+
 
     <script>
         function startTime() {
@@ -36,7 +37,27 @@
             document.getElementById("fecha").innerHTML = fechaFormateada;
         }
     </script>
-    
+    <script>
+        let array = ["imagen-brasil.jpg", "imagen-egipto.jpg", "imagen-safari.jpg"];
+
+        cont = 0;
+        function anterior() {
+            if (cont == 0) {
+                cont = 2;
+            } else {
+                cont--;
+            }
+            imag.src = array[cont];
+        }
+        function siguiente() {
+            if (cont == 2) {
+                cont = 0;
+            } else {
+                cont++;
+            }
+            imag.src = array[cont];
+        }
+    </script>
 </head>
 
 <body onload="mostrarFecha(); startTime()" style="background-color: rgb(234, 234, 213); ">
@@ -62,13 +83,10 @@
         </div>
         <div id="reproductor">
             <audio controls autoplay>
-                <source src="Pagina.mp3">
+                <source src="Pagina.mp3" type="mp3">
             </audio>
         </div>
     </div>
-
-
-
 
 
     <header>
@@ -85,20 +103,15 @@
             </ul>
         </div>
     </header>
-    <h2> Cumple tus sueños</h2>
-    <div class="galeria">
-        <ul>
-            <li>
-                <img src="imagen-brasil.jpg">
-            </li>
-            <li>
-                <img src="imagen-egipto.jpg">
-            </li>
-            <li>
-                <img src="imagen-safari.jpg">
-            </li>
-        </ul>
+
+    <h2> ¡Ven!, y cumple tus sueños...</h2>
+    <div style="display: flex; justify-content: center; border: black"> 
+        <button id="anterior" onclick="anterior()" style="background-color: darkslategray; color: white; font-size: 20px;" >Anterior</button>
+        <img id="imag" src="imagen-brasil.jpg" alt="medio" width="800px" height="500px">
+        <button id="siguiente" onclick="siguiente()" style="background-color: darkslategray; color: white; font-size: 20px;" >Siguiente</button>
     </div>
+
+
 </body>
 
 </html>
