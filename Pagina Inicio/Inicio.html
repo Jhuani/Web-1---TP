@@ -82,36 +82,48 @@
             </script>
         </div>
         <div id="reproductor">
-            <audio controls autoplay>
-                <source src="Pagina.mp3" type="mp3">
+            <audio controls src="Pagina.mp3">
+                <a href="Pagina.mp3">
             </audio>
         </div>
     </div>
 
-
     <header>
-        <div class="container">
+        <div class="redes-sociales">
             <p class="logo"> </p>
-            <ul class="menu">
+            <ul class="menu" style="font-size: 25px;">
                 <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#somos">Quienes somos</a></li>
-                <li><a href="#promos">Promos</a></li>
-                <li><a href="#destinos">Destinos</a></li>
-                <li><a href="#pagos">Medios de Pago</a></li>
-                <li><a href="#contacto">Contactos</a></li>
-                <li><a href="#sumate">¡Sumate a nuestro equipo!</a></li>
+                <li><a href="quienes-somos/quienes-somos.html">Quienes somos</a></li>
+                <li><a href="promos/promos.html">Promos</a></li>
+                <li><a href="destinos/destinos.html">Destinos</a></li>
+                <li><a href="pagos/pagos.html">Medios de Pago</a></li>
+                <li><a href="contacto/contacto.html">Contactos</a></li>
+                <li><a href="sumate/sumate.html">¡Sumate a nuestro equipo!</a></li>
             </ul>
         </div>
     </header>
+    <br>
 
-    <h2> ¡Ven!, y cumple tus sueños...</h2>
-    <div style="display: flex; justify-content: center; border: black"> 
-        <button id="anterior" onclick="anterior()" style="background-color: darkslategray; color: white; font-size: 20px;" >Anterior</button>
-        <img id="imag" src="imagen-brasil.jpg" alt="medio" width="800px" height="500px">
-        <button id="siguiente" onclick="siguiente()" style="background-color: darkslategray; color: white; font-size: 20px;" >Siguiente</button>
+    <div style="display: flex; justify-content: center; border: black">
+        <button id="anterior" onclick="anterior()"
+            style="background-color: darkslategray; color: white; font-size: 20px;">Anterior</button>
+        <img id="imag" src="imagen-brasil.jpg" alt="medio" width="1000px" height="700px">
+        <button id="siguiente" onclick="siguiente()"
+            style="background-color: darkslategray; color: white; font-size: 20px;">Siguiente</button>
     </div>
-
-
+    <br>
 </body>
+<footer>
+    <br>
+    <div class="iconos-redes" >
+        <li><img src="iconos/social_facebook_fb_35.png" alt="Facebook" width="50px" height="50px" ></li>
+        <li><img src="iconos/social_googleplus_google_1.png" alt="Google+" width="50px" height="50px" ></li>
+        <li><img src="iconos/social_instagram_3.png" alt="Instagram" width="50px" height="50px" ></li>
+        <li><img src="iconos/social_skype_34.png" alt="Skype" width="50px" height="50px" ></li>
+        <li><img src="iconos/social_Twitter_38.png" alt="Twitter" width="50px" height="50px" ></li>
+        <li><img src="iconos/social_youtube_23.png" alt="You Tube" width="50px" height="50px" ></li>
+    </div>
+</footer>
+<br>
 
 </html>
