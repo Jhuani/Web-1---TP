@@ -99,3 +99,10 @@ h3::after {
     align-items: center;
     border: 5px solid rgb(122, 53, 53);
 }
+
+.pie-pagina {
+    display: flex;
+    flex-direction: row;
+    justify-content:right ;
+    align-items: center;
+}
