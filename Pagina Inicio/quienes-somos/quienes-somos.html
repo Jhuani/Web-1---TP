@@ -6,11 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARGENTINA TRAVEL CO.</title>
-    <link rel="shortcut icon" href="../logo1.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="media/logo1.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="Menu.css">
-
-
-
     <script>
         function startTime() {
             today = new Date();
@@ -37,34 +34,54 @@
             document.getElementById("fecha").innerHTML = fechaFormateada;
         }
     </script>
+    <script>
+        let array = ["media/ballenaspuertomadrynchubutargentina.jpg", "media/cataratasdeliguazumisionesargentina.jpg", "media/glaciarperitomorenocalafatepatagoniaargentina.jpg", "media/purmamarcasaltaargentina.jpg"];
+        cont = 0;
+        function anterior() {
+            if (cont == 0) {
+                cont = 3;
+            } else {
+                cont--;
+            }
+            imag.src = array[cont];
+        }
+        function siguiente() {
+            if (cont == 3) {
+                cont = 0;
+            } else {
+                cont++;
+            }
+            imag.src = array[cont];
+        }
+    </script>
 </head>
-
-<body onload="mostrarFecha(); startTime()" style="background-color: rgb(234, 234, 213); ">
-    <div class="cabezal">
-        <img src="../media/logo1.jpg" alt="LOGO" width="350" height="250" style="float: left;">
-        <div>
-            <h1 style="scale: 2,5; font-family: 'Lucida Sans'; text-align: center;">
-                ¡TUS PROXIMAS VACACIONES ESTAN AQUI! </h1>
+<div class="cabezal">
+    <img src="../media/logo1.jpg" alt="LOGO" width="350" height="250" style="float: left;">
+    <div>
+        <h1 style="font-family: 'Lucida Sans'; text-align: center; font-size: 55px; color: white;">
+            ¡TUS PROXIMAS VACACIONES ESTAN AQUI! </h1>
+    </div>
+</div>
+<body onload="mostrarFecha(); startTime()" style="background-color: gray;">
+    <div class="cabezal2">
+        <div class="datos fecha" style="font-size: 30px;">
+            <div id="fecha">
+            </div>
+            <div id="reloj">
+            </div>
+            <div id="contador">
+                <script>
+                    var ran
+                    ran = Math.round(Math.random() * 50000)
+                    document.write("Visitante N°:")
+                    document.write(ran)
+                </script>
+            </div>
+            <div id="reproductor">
+                <audio controls src="../media/Pagina.mp3" type="mp3" autoplay></audio>
+            </div>
         </div>
     </div>
-    <div class="datos fecha" style="font-size: 25px;">
-        <div id="fecha">
-        </div>
-        <div id="reloj">
-        </div>
-        <div id="contador">
-            <script>
-                var ran
-                ran = Math.round(Math.random() * 50000)
-                document.write("Visitante N°:")
-                document.write(ran)
-            </script>
-        </div>
-        <div id="reproductor">
-            <audio controls src="../media/Pagina.mp3"> </audio>
-        </div>
-    </div>
-
     <header>
         <div class="container">
             <p class="logo"> </p>

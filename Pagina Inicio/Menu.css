@@ -1,9 +1,12 @@
-.cabezal{
+
+.cabezal {
     width: auto;
     height: auto;
-    background-color: antiquewhite;
+    background-image: url('../potrero.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     overflow: visible;
-    border: 5px solid rgb(122, 53, 53);
+    border: 5px solid whitesmoke;
 
     display: flex;
     flex-direction: row;
@@ -11,16 +14,27 @@
     align-items: center;
 }
 
+.cabezal2 {
+    color: white;
+    display:flexbox;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    background-color: #333;
+}
+
+
 ul {
     list-style-type: none;
-    margin: 5;
+    margin: 2;
     padding: 0;
     overflow: hidden;
     background-color: #333;
 }
 
 li {
-    float:left;
+    float: left;
+
 }
 
 li a {
@@ -45,39 +59,41 @@ h2 {
     font-size: 2rem;
 }
 
-.reloj{
+.reloj {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
 
-.fecha{
+.fecha {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
 
-.contador{
+.contador {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
 
-.iconos-redes{
-        background: #fff;
-        display: flex;
-        flex-direction: row;
-        justify-content:center ;
-        align-items: center;
-        border: 5px solid rgb(122, 53, 53);
+.iconos-redes {
+    background: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
 }
 
 .pie-pagina {
+    background-color: black;
     display: flex;
     flex-direction: row;
-    justify-content:right ;
+    justify-content: right;
     align-items: center;
+    color: white;
 }

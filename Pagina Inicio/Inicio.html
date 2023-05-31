@@ -8,7 +8,6 @@
     <title>ARGENTINA TRAVEL CO.</title>
     <link rel="shortcut icon" href="media/logo1.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="Menu.css">
-
     <script>
         function startTime() {
             today = new Date();
@@ -56,37 +55,37 @@
         }
     </script>
 </head>
-
-<body onload="mostrarFecha(); startTime()" style="background-color: rgb(234, 234, 213);">
-    <div class="cabezal">
-        <img src="media/logo1.jpg" alt="LOGO" width="450" height="350" style="float: left;">
-        <div>
-            <h1 style="font-family: 'Lucida Sans'; text-align: center; font-size: 55px">
-                ¡TUS PROXIMAS VACACIONES ESTAN AQUI! </h1>
+<div class="cabezal">
+    <img src="media/logo1.jpg" alt="LOGO" width="350" height="250" style="float: left;">
+    <div>
+        <h1 style="font-family: 'Lucida Sans'; text-align: center; font-size: 55px; color: white;">
+            ¡TUS PROXIMAS VACACIONES ESTAN AQUI! </h1>
+    </div>
+</div>
+<body onload="mostrarFecha(); startTime()" style="background-color: gray;">
+    <div class="cabezal2">
+        <div class="datos fecha" style="font-size: 30px;">
+            <div id="fecha">
+            </div>
+            <div id="reloj">
+            </div>
+            <div id="contador">
+                <script>
+                    var ran
+                    ran = Math.round(Math.random() * 50000)
+                    document.write("Visitante N°:")
+                    document.write(ran)
+                </script>
+            </div>
+            <div id="reproductor">
+                <audio controls src="media/Pagina.mp3" type="mp3" autoplay></audio>
+            </div>
         </div>
     </div>
-    <div class="datos fecha" style="font-size: 30px;">
-        <div id="fecha">
-        </div>
-        <div id="reloj">
-        </div>
-        <div id="contador">
-            <script>
-                var ran
-                ran = Math.round(Math.random() * 50000)
-                document.write("Visitante N°:")
-                document.write(ran)
-            </script>
-        </div>
-        <div id="reproductor">
-            <audio controls src="media/Pagina.mp3" type="mp3" autoplay></audio>
-        </div>
-    </div>
-
     <header>
         <div class="container">
             <p class="logo"> </p>
-            <ul class="menu" style="font-size: 25px;">
+            <ul class="menu" style="font-size: 35px;">
                 <li><a href="Inicio.html" class="active">Home</a></li>
                 <li><a href="quienes-somos/quienes-somos.html">Quienes somos</a></li>
                 <li><a href="promos/promos.html">Promos</a></li>
@@ -97,32 +96,30 @@
             </ul>
         </div>
     </header>
-    <br>
-
     <div style="display: flex; justify-content: center; border: black">
         <button id="anterior" onclick="anterior()"
-            style="background-color: darkslategray; color: white; font-size: 20px;">Anterior</button>
+            style="background-color: black; color: white; font-size: 25px;">Anterior</button>
         <img id="imag" src="media/purmamarcasaltaargentina.jpg" alt="medio" width="1000px" height="600px">
         <button id="siguiente" onclick="siguiente()"
-            style="background-color: darkslategray; color: white; font-size: 20px;">Siguiente</button>
+            style="background-color: black; color: white; font-size: 25px;">Siguiente</button>
     </div>
     <br>
 </body>
 <footer>
     <br>
     <div class="iconos-redes">
-        <li><a href="http://www.facebook.com" target="_blank"><img src="iconos/social_facebook_fb_35.png" alt="Facebook" width="50px"
-                    height="50px"></a></li>
-        <li><a href="http://www.instagram.com" target="_blank"><img src="iconos/social_instagram_3.png" alt="Instagram" width="50px"
-                    height="50px"></a></li>
-        <li><a href="http://www.skype.com" target="_blank"><img src="iconos/social_skype_34.png" alt="Skype" width="50px"
-                    height="50px"></a></li>
-        <li><a href="http://www.twitter.com" target="_blank"><img src="iconos/social_Twitter_38.png" alt="Twitter" width="50px"
-                    height="50px"></a></li>
-        <li><a href="http://www.youtube.com" target="_blank"><img src="iconos/social_youtube_23.png" alt="You Tube" width="50px"
-                    height="50px"></a></li>
+        <li><a href="http://www.facebook.com" target="_blank"><img src="iconos/social_facebook_fb_35.png" alt="Facebook"
+                    width="50px" height="50px"></a></li>
+        <li><a href="http://www.instagram.com" target="_blank"><img src="iconos/social_instagram_3.png" alt="Instagram"
+                    width="50px" height="50px"></a></li>
+        <li><a href="http://www.skype.com" target="_blank"><img src="iconos/social_skype_34.png" alt="Skype"
+                    width="50px" height="50px"></a></li>
+        <li><a href="http://www.twitter.com" target="_blank"><img src="iconos/social_Twitter_38.png" alt="Twitter"
+                    width="50px" height="50px"></a></li>
+        <li><a href="http://www.youtube.com" target="_blank"><img src="iconos/social_youtube_23.png" alt="You Tube"
+                    width="50px" height="50px"></a></li>
     </div>
-    <p>
+    <p style="color:white">
         Franquicias Argentina Travel Co. - Legajo Nro. 72919 Ministerio de Turismo de la Nación, propiedad de Lucero y
         Asoc. - Suipacha 921(5700) San Luis , Argentina , Tel: (+54) 266-5020676.
         El titular de los datos personales tiene la facultad de ejercer el derecho de acceso a los mismos en forma
@@ -140,10 +137,10 @@
         <div class="info-logos" style="justify-content: right;">
             <li><a href="https://www.argentina.gob.ar/turismoydeportes" target="_blank"><img src="media/qr-min-tur.png"
                         alt="QR Ministerio Turismo"></a></li>
-            <li><a href="https://servicioscf.afip.gob.ar/publico/denuncias/denunciaCD.aspx" target="_blank"><img src="media/AFIP.jpg"
-                        alt="AFIP-Su-Denuncia" width="50px" height="50px"></a></li>
-            <li><a href="https://www.argentina.gob.ar/aaip/datospersonales" target="_blank"><img src="media/isologopublicas.jpg"
-                        alt="Proteccion de datos" width="50px" height="50px"></a></li>
+            <li><a href="https://servicioscf.afip.gob.ar/publico/denuncias/denunciaCD.aspx" target="_blank"><img
+                        src="media/AFIP.jpg" alt="AFIP-Su-Denuncia" width="50px" height="50px"></a></li>
+            <li><a href="https://www.argentina.gob.ar/aaip/datospersonales" target="_blank"><img
+                        src="media/isologopublicas.jpg" alt="Proteccion de datos" width="50px" height="50px"></a></li>
         </div>
 </footer>
 

@@ -1,9 +1,12 @@
+
 .cabezal {
     width: auto;
     height: auto;
-    background-color: antiquewhite;
+    background-image: url('../media/potrero.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     overflow: visible;
-    border: 5px solid rgb(122, 53, 53);
+    border: 5px solid whitesmoke;
 
     display: flex;
     flex-direction: row;
@@ -11,6 +14,14 @@
     align-items: center;
 }
 
+.cabezal2 {
+    color: white;
+    display:flexbox;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    background-color: #333;
+}
 ul {
     list-style-type: none;
     margin: 0;
@@ -92,17 +103,19 @@ h3::after {
 }
 
 .iconos-redes {
-    background: #fff;
+    background: #ffffff;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 5px solid rgb(122, 53, 53);
+    border: 5px solid white;
 }
 
 .pie-pagina {
+    background-color: black;
     display: flex;
     flex-direction: row;
-    justify-content:right ;
+    justify-content: right;
     align-items: center;
+    color: white;
 }
