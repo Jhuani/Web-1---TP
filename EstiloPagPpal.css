@@ -3,9 +3,10 @@ h1{
 }
 
 .portada{
-    color: rgb(249, 254, 254);
+    color: rgb(15, 15, 15);
     opacity: 0.75;
     position:center;
+    Backdrop-filter: blur(6px);
 }
 
 .zoom{

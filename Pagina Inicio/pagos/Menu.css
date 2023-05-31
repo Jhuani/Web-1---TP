@@ -127,6 +127,7 @@
         display: table;
         border: 5px solid black;
         justify-content: center;
+        margin-top: 5px;
     }
 
     .img {
