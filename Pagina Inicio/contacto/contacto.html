@@ -8,7 +8,8 @@
     <title>ARGENTINA TRAVEL CO.</title>
     <link rel="shortcut icon" href="../media/logo1.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="Menu.css">
-
+    <link rel="stylesheet" type="text/css" href="Formulario.css">
+    <script src="./Formu.js"></script>
 
 
     <script>
@@ -36,6 +37,11 @@
             var fechaFormateada = fechaActual.toLocaleDateString('es-ES', opcionesFecha);
             document.getElementById("fecha").innerHTML = fechaFormateada;
         }
+    </script>
+    <script>
+        function mensajeFormulario() {
+            alert("Error. Falta completar un dato");
+            }
     </script>
 </head>
 
@@ -86,12 +92,31 @@
         <h3></h3>
         <i>
             <h1>Contactanos</h1>
-            <p><b>Para contactarse con nosotros hágalo desde el formulario de contacto que está a continuación</b></p>
-            <p> <b>Si lo desea, envie un mail a info@miagenciadeviajes.com.ar ó llame al Tel: (+54) 266-5020676. También puede enviar
-                    su consulta por whatsapp haciendo clic aquí <a href="https://api.whatsapp.com/"><img src="../iconos/whatsapp_chat_message_communication_icon_193327.png" alt="Facebook" width="50px"
-                        height="50px"></a>
-            </p>
-            <p><a href=""></a></p>
+            <p><b>Si desea recibir informacion complete el siguiente formulario</b></p>
+            <form onsubmit="return validar()" id="f_contacto">
+                <label for="f_nombre">NOMBRE</label>
+                <input id="f_nombre" size="90" autofocus />
+                <label for="f_apellido">APELLIDO</label>
+                <input id="f_apellido" size="90"/>
+                <label for="f_email">EMAIL</label>
+                <input id="f_email" size="90"/>
+                <label for="f_mensaje">MENSAJE (Max. 200 caracteres)</label>
+                <textarea id="f_mensaje" style="width:600px; height:150px;"></textarea>
+                <br>
+                <input type="image" src="../iconos/enviar.png" alt="ENVIAR" width="48" height="48">
+                <div id="errores">
+                </div>
+            </form>
+            
+            <p><b>Tambien puede enviar un mail a info@argentinatravel.com.ar ó llame al Tel: (+54) 266-5020676. </p>
+            <p><b>Ademas contamos con servicio de mensaje directo mediante whatsapp haciendo <a
+                        href="https://api.whatsapp.com/" target="_blank">clic aquí <img
+                            src="../iconos/whatsapp_chat_message_communication_icon_193327.png" alt="Facebook"
+                            width="40px" height="40px"></a></p>
+            <p>¡Tu consulta no nos molesta!</p>
+            <br>
+
+
         </i>
         <h3></h3>
     </div>
@@ -99,16 +124,16 @@
 <footer>
     <br>
     <div class="iconos-redes">
-        <li><a href="http://www.facebook.com"><img src="../iconos/social_facebook_fb_35.png" alt="Facebook" width="50px"
-                    height="50px"></a></li>
-        <li><a href="http://www.instagram.com"><img src="../iconos/social_instagram_3.png" alt="Instagram" width="50px"
-                    height="50px"></a></li>
-        <li><a href="http://www.skype.com"><img src="../iconos/social_skype_34.png" alt="Skype" width="50px"
-                    height="50px"></a></li>
-        <li><a href="http://www.twitter.com"><img src="../iconos/social_Twitter_38.png" alt="Twitter" width="50px"
-                    height="50px"></a></li>
-        <li><a href="http://www.youtube.com"><img src="../iconos/social_youtube_23.png" alt="You Tube" width="50px"
-                    height="50px"></a></li>
+        <li><a href="http://www.facebook.com" target="_blank"><img src="../iconos/social_facebook_fb_35.png"
+                    alt="Facebook" width="50px" height="50px"></a></li>
+        <li><a href="http://www.instagram.com" target="_blank"><img src="../iconos/social_instagram_3.png"
+                    alt="Instagram" width="50px" height="50px"></a></li>
+        <li><a href="http://www.skype.com" target="_blank"><img src="../iconos/social_skype_34.png" alt="Skype"
+                    width="50px" height="50px"></a></li>
+        <li><a href="http://www.twitter.com" target="_blank"><img src="../iconos/social_Twitter_38.png" alt="Twitter"
+                    width="50px" height="50px"></a></li>
+        <li><a href="http://www.youtube.com" target="_blank"><img src="../iconos/social_youtube_23.png" alt="You Tube"
+                    width="50px" height="50px"></a></li>
     </div>
     <p>
         Franquicias Argentina Travel Co. - Legajo Nro. 72919 Ministerio de Turismo de la Nación, propiedad de Lucero y
@@ -126,12 +151,13 @@
     <div class="pie-pagina">
         <h4>Todos los derechos reservados. Powered by Argentina Travel Co.</h4>
         <div class="info-logos" style="justify-content: right;">
-            <li><a href="https://www.argentina.gob.ar/turismoydeportes"><img src="../media/qr-min-tur.png"
-                        alt="QR Ministerio Turismo"></a></li>
-            <li><a href="https://servicioscf.afip.gob.ar/publico/denuncias/denunciaCD.aspx"><img src="../media/AFIP.jpg"
-                        alt="AFIP-Su-Denuncia" width="50px" height="50px"></a></li>
-            <li><a href="https://www.argentina.gob.ar/aaip/datospersonales"><img src="../media/isologopublicas.jpg"
-                        alt="Proteccion de datos" width="50px" height="50px"></a></li>
+            <li><a href="https://www.argentina.gob.ar/turismoydeportes" target="_blank"><img
+                        src="../media/qr-min-tur.png" alt="QR Ministerio Turismo"></a></li>
+            <li><a href="https://servicioscf.afip.gob.ar/publico/denuncias/denunciaCD.aspx" target="_blank"><img
+                        src="../media/AFIP.jpg" alt="AFIP-Su-Denuncia" width="50px" height="50px"></a></li>
+            <li><a href="https://www.argentina.gob.ar/aaip/datospersonales" target="_blank"><img
+                        src="../media/isologopublicas.jpg" alt="Proteccion de datos" width="50px" height="50px"></a>
+            </li>
         </div>
 </footer>
 
