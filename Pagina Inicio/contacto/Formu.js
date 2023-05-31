@@ -50,7 +50,7 @@ function validar() {
         hubo_error = true;
     }
 
-    if (f_email.value = "" && !reg_correo.test(f_email.value)) {
+    if (f_email.value == "" && !reg_correo.test(f_email.value)) {
         //if(!/^([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)?$/.test(f_email.value)){
         f_email.classList.add("error");
         let p = document.createElement("p");
@@ -63,17 +63,7 @@ function validar() {
         return false;
     } else {
         let p = document.createElement("p");
-        if (f_email.value != "") {
-            p.innerHTML =
-                f_nombre.value + " dice " +
-                f_mensaje.value + ". Contacto: " +
-                f_email.value + ".";
-        } else {
-            p.innerHTML =
-                f_nombre.value + " dice " +
-                f_mensaje.value + ".";
-        }
-        alert("Mensaje enviado con exito")
+        p.innerHTML=alert("Mensaje enviado con exito")
         document.forms["f_contacto"].reset();
         let primero = document.querySelector("form input");
         primero.focus();
