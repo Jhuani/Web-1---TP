@@ -8,6 +8,7 @@
     <title>ARGENTINA TRAVEL CO.</title>
     <link rel="shortcut icon" href="media/logo1.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="Menu.css">
+    <script src="Formu.js"></script>
     <script>
         function startTime() {
             today = new Date();
@@ -62,7 +63,7 @@
             ¡TUS PROXIMAS VACACIONES ESTAN AQUI! </h1>
     </div>
 </div>
-<body onload="mostrarFecha(); startTime()" style="background-color: gray;">
+<body onload=" mostrarFecha(); startTime()" style="background-color: gray;">
     <div class="cabezal2">
         <div class="datos fecha" style="font-size: 30px;">
             <div id="fecha">
@@ -93,13 +94,21 @@
         <br>
         <h3></h3>
         <i>
-            <h1>Contactanos</h1>
-            <p><b>Para contactarse con nosotros hágalo desde el formulario de contacto que está a continuación</b></p>
-            <p> <b>Si lo desea, envie un mail a info@miagenciadeviajes.com.ar ó llame al Tel: (+54) 266-5020676. También puede enviar
-                    su consulta por whatsapp haciendo clic aquí <a href="https://api.whatsapp.com/"><img src="../iconos/whatsapp_chat_message_communication_icon_193327.png" alt="Facebook" width="50px"
-                        height="50px"></a>
-            </p>
-            <p><a href=""></a></p>
+            <h1>¿Queres ser parte de nuestro equipo?</h1>
+            <p><b>Completa el siguiente formulario y nos estaremos comunicando con vos</b></p>
+            <form onsubmit="return validar()" id="f_sumate">
+                <label for="f_nya">NOMBRE Y APELLIDO</label>
+                <input id="f_nya" size="90" autofocus />
+                <label for="f_telefono">TELEFONO</label>
+                <input id="f_telefono" size="90" />
+                <label for="f_email">EMAIL</label>
+                <input id="f_email" size="90" />
+                <label for="f_archivo">Selecciona el archivo:</label>
+                <input type="file" id="f_archivo" name="f_archivo"><br><br>
+                <button type="submit">Enviar</button>
+                <div id="errores">
+                </div>
+            </form>
         </i>
         <h3></h3>
     </div>
