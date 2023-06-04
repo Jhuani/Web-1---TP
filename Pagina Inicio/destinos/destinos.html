@@ -59,11 +59,13 @@
 <div class="cabezal">
     <img src="../media/logo1.jpg" alt="LOGO" width="350" height="250" style="float: left;">
     <div>
-        <h1 style="font-family: 'Lucida Sans'; text-align: center; font-size: 75px; color: white;-webkit-text-stroke: 2px black">
+        <h1
+            style="font-family: 'Lucida Sans'; text-align: center; font-size: 75px; color: white;-webkit-text-stroke: 2px black">
             ¡TUS PROXIMAS VACACIONES ESTAN AQUI! </h1>
     </div>
 </div>
-<body onload="mostrarFecha(); startTime()" style="background-color: gray;">
+
+<body onload="mostrarFecha(); startTime()" style="background-color: white;">
     <div class="cabezal2">
         <div class="datos fecha" style="font-size: 30px;">
             <div id="fecha">
@@ -83,7 +85,7 @@
                 <li><a href="../quienes-somos/quienes-somos.html">Quienes somos</a></li>
                 <li><a href="../preguntas-frecuentes/preguntas.html">Preguntas Frecuentes</a></li>
                 <li><a href="../promos/promos.html">Promos</a></li>
-                <li><a href="../destinos/destinos.html"  class="active">Destinos</a></li>
+                <li><a href="../destinos/destinos.html" class="active">Destinos</a></li>
                 <li><a href="../pagos/pagos.html">Medios de Pago</a></li>
                 <li><a href="../contacto/contacto.html">Contactos</a></li>
                 <li><a href="../sumate/sumate.html">¡Sumate a nuestro equipo!</a></li>
@@ -92,36 +94,48 @@
     </header>
     <br>
     <div class="contenido">
+        <h3></h3>
         <br>
-        <h3></h3>
-        <i>
-            <img src="../media/previaje_invierno.jpg" alt="Previaje4-2023">
-            <p><b>DETALLES:</b></p>
-            <p> <b>PRE VIAJE - PROGRAMA DE PREVENTA TURISTICA PARA VIAJAR DESDE NOVIEMBRE 2022 A DICIEMBRE 2023: </b>
-                El programa de preventa Turística 2020 ( PPT ) permite a los pasajeros que compren un paquete de
-                servicios turísticos a prestarse dentro de Todo el Territorio de la República Argentina en una agencia
-                de Viajes que esté inscripta en el mismo, obtener un credito/recupero de hasta el 50% del importe
-                gastado en su compra . Existe un tope de hasta $ 200.000 ( cien mil pesos ) por CUIL o CUIT
-            </p>
-            <p><a href=""></a></p>
-        </i>
-        <h3></h3>
+        <div class="destinos-paises">
+            <div class="pais-argentina">
+                <P>ARGENTINA</P>
+                <div class="imagen-destino">
+                    <a href="../destinos/Argentina/argentina.html" target="_blank">
+                        <H1 style="display:flex ; color: black; font-size: 50px;">PAQUETES</h1>
+                    </a>
+                </div>
+            </div>
+            <div class="pais-brasil">
+                <P>BRASIL</P>
+                <div class="imagen-destino"><a href="../destinos/Brasil/brasil.html" target="_blank">
+                        <H1 style="display:flex ; color: black; font-size: 50px;">PAQUETES</H1>
+                    </a>
+                </div>
+            </div>
+            <div class="pais-proximamente">
+                <P>OTROS DESTINOS</P>
+                <div class="imagen-destino">
+                </div>
+
+            </div>
+        </div>
     </div>
+    <h3></h3>
     <a href="#arriba"><img src="../media/Flecha Arriba.png" alt="Principio" width="50px" height="50px"></a>
 </body>
 <footer>
     <br>
     <div class="iconos-redes">
-        <li><a href="http://www.facebook.com"  target="_blank"><img src="../iconos/social_facebook_fb_35.png" alt="Facebook" width="50px"
-                    height="50px"></a></li>
-        <li><a href="http://www.instagram.com" target="_blank"><img src="../iconos/social_instagram_3.png" alt="Instagram" width="50px"
-                    height="50px"></a></li>
-        <li><a href="http://www.skype.com" target="_blank"><img src="../iconos/social_skype_34.png" alt="Skype" width="50px"
-                    height="50px"></a></li>
-        <li><a href="http://www.twitter.com" target="_blank"><img src="../iconos/social_Twitter_38.png" alt="Twitter" width="50px"
-                    height="50px"></a></li>
-        <li><a href="http://www.youtube.com" target="_blank"><img src="../iconos/social_youtube_23.png" alt="You Tube" width="50px"
-                    height="50px"></a></li>
+        <li><a href="http://www.facebook.com" target="_blank"><img src="../iconos/social_facebook_fb_35.png"
+                    alt="Facebook" width="50px" height="50px"></a></li>
+        <li><a href="http://www.instagram.com" target="_blank"><img src="../iconos/social_instagram_3.png"
+                    alt="Instagram" width="50px" height="50px"></a></li>
+        <li><a href="http://www.skype.com" target="_blank"><img src="../iconos/social_skype_34.png" alt="Skype"
+                    width="50px" height="50px"></a></li>
+        <li><a href="http://www.twitter.com" target="_blank"><img src="../iconos/social_Twitter_38.png" alt="Twitter"
+                    width="50px" height="50px"></a></li>
+        <li><a href="http://www.youtube.com" target="_blank"><img src="../iconos/social_youtube_23.png" alt="You Tube"
+                    width="50px" height="50px"></a></li>
     </div>
     <p>
         Franquicias Argentina Travel Co. - Legajo Nro. 72919 Ministerio de Turismo de la Nación, propiedad de Lucero y
@@ -139,12 +153,13 @@
     <div class="pie-pagina">
         <h4>Todos los derechos reservados. Powered by Argentina Travel Co.</h4>
         <div class="info-logos" style="justify-content: right;">
-            <li><a href="https://www.argentina.gob.ar/turismoydeportes" target="_blank"><img src="../media/qr-min-tur.png"
-                        alt="QR Ministerio Turismo"></a></li>
-            <li><a href="https://servicioscf.afip.gob.ar/publico/denuncias/denunciaCD.aspx" target="_blank"><img src="../media/AFIP.jpg"
-                        alt="AFIP-Su-Denuncia" width="50px" height="50px"></a></li>
-            <li><a href="https://www.argentina.gob.ar/aaip/datospersonales" target="_blank"><img src="../media/isologopublicas.jpg"
-                        alt="Proteccion de datos" width="50px" height="50px"></a></li>
+            <li><a href="https://www.argentina.gob.ar/turismoydeportes" target="_blank"><img
+                        src="../media/qr-min-tur.png" alt="QR Ministerio Turismo"></a></li>
+            <li><a href="https://servicioscf.afip.gob.ar/publico/denuncias/denunciaCD.aspx" target="_blank"><img
+                        src="../media/AFIP.jpg" alt="AFIP-Su-Denuncia" width="50px" height="50px"></a></li>
+            <li><a href="https://www.argentina.gob.ar/aaip/datospersonales" target="_blank"><img
+                        src="../media/isologopublicas.jpg" alt="Proteccion de datos" width="50px" height="50px"></a>
+            </li>
         </div>
 </footer>
 

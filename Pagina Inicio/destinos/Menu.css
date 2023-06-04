@@ -1,4 +1,3 @@
-
 .cabezal {
     width: auto;
     height: auto;
@@ -16,12 +15,13 @@
 
 .cabezal2 {
     color: white;
-    display:flexbox;
-    margin-left:auto;
-    margin-right:auto;
-    text-align:center;
+    display: flexbox;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     background-color: #333;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -81,8 +81,8 @@ h2 {
     text-align: justify;
     font-size: 25px;
     font-family: 'Lucida Sans';
-    margin-left: 500px;
-    margin-right: 500px;
+    margin-left: 300px;
+    margin-right: 300px;
 }
 
 
@@ -119,3 +119,85 @@ h3::after {
     align-items: center;
     color: white;
 }
+
+/*Paises-Detinos*/
+
+.cotenido{
+    margin-left: 250px;
+    margin-right: 250px;
+}
+.destinos-paises{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-inline-end: 50px;
+}
+
+.pais-argentina .imagen-destino{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 15px -1px rgba(0,0,0,.2);
+        width: 350px;
+        height: 400px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: .4s;
+        background-image: url('../media/pais-argentina.jpg');
+        background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+.pais-brasil .imagen-destino{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 15px -1px rgba(0,0,0,.2);
+        width: 350px;
+        height: 400px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: .4s;
+        background-image: url('../media/brasil-destino.png');
+        background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.pais-proximamente .imagen-destino{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 15px -1px rgba(0,0,0,.2);
+        width: 350px;
+        height: 400px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: .4s;
+        background-image: url('../media/mas-proximamente.jpg');
+        background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/*Destinos*/
+.destino {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-inline-end: 50px;
+}
+.imagen{
+    justify-content: center;
+}
+
+.detalle{
+margin-left: 50px;
+font-family:Cambria ;
+}
+
+.destino-contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content:center ;
+}
+
