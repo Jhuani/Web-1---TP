@@ -1,10 +1,10 @@
 
 
-function validar() { 
+function validar() {
     let primero = document.querySelector("form input");
-primero.focus();
+    primero.focus();
 
-let reg_correo = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
+    let reg_correo = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
 
     let f_nya = document.querySelector("#f_nya");
     f_nya.classList.remove("error");
@@ -27,40 +27,30 @@ let reg_correo = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
     if ((f_nya.value == "") || (f_nya.value == " ")) {
         f_nya.classList.add("error");
         let p = document.createElement("p");
-        p.innerHTML = alert("ingrese un nombre o apellido");
+        p.innerHTML = alert("Error. Debe cargar su nombre y apellido");
         hubo_error = true;
     }
 
     if (f_telefono.value == "") {
         f_telefono.classList.add("error");
         let p = document.createElement("p");
-        p.innerHTML = alert("Falta el telefono");
+        p.innerHTML = alert("Error. Debe cargar su numero de telefono");
         hubo_error = true;
     }
 
     if (f_archivo.value == "") {
         f_archivo.classList.add("error");
         let p = document.createElement("p");
-        p.innerHTML = alert("Falta cargar su CV");
+        p.innerHTML = alert("Error. Debe cargar su archivo CV");
         hubo_error = true;
     }
 
-    if (f_email.value == "" && !reg_correo.test(f_email.value)) {
-        f_email.classList.add("error");
-        let p = document.createElement("p");
-        p.innerHTML = alert("Email inválido");
-        hubo_error = true;
-    }
-
-    if (hubo_error) {
-        //lta_errores.style.display = "initial";
-        return false;
+    if (reg_correo.test(f_email.value)) {
+        alert('Su solicitud se envio correctamente.');
+        alert(' Pronto estaremos en contacto con Ud. ¡Muchas gracias!')
+        return true;
     } else {
-        let p = document.createElement("p");
-        p.innerHTML=alert("Su CV se cargo con exito al sistema")
-        document.forms["f_sumate"].reset();
-        let primero = document.querySelector("form input");
-        primero.focus();
+        alert('Email invalido. Reintentar.');
+        return false;
     }
-    return false;
 }

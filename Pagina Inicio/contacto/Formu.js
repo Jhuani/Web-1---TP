@@ -3,7 +3,7 @@ function validar() {
     let primero = document.querySelector("form input");
     primero.focus();
 
-    let reg_correo = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
+    let reg_correo = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
 
     let f_nombre = document.querySelector("#f_nombre");
     f_nombre.classList.remove("error");
@@ -21,52 +21,41 @@ function validar() {
     lta_errores.innerHTML = "";
     lta_errores.innerHTML = " ";
     lta_errores.style.display = "none";
-    //let lta_mensajes = document.querySelector("#mensajes");
+
     let hubo_error = false;
 
     if ((f_nombre.value == "") || (f_nombre.value == " ")) {
         f_nombre.classList.add("error");
         let p = document.createElement("p");
-        p.innerHTML = alert("Falta el nombre");
+        p.innerHTML = alert("Error. Debe completar con su nombre.");
         hubo_error = true;
     }
 
     if (f_apellido.value == "") {
         f_apellido.classList.add("error");
         let p = document.createElement("p");
-        p.innerHTML = alert("Falta el apellido");
+        p.innerHTML = alert("Error. Debe completar con su apellido.");
         hubo_error = true;
     }
 
     if (f_mensaje.value == "") {
         f_mensaje.classList.add("error");
         let p = document.createElement("p");
-        p.innerHTML = alert("Falta el mensaje");
+        p.innerHTML = alert("Error. El campo del mensaje no puede estar vacio");
         hubo_error = true;
     } else if (f_mensaje.value.length > 200) {
         f_mensaje.classList.add("error");
         let p = document.createElement("p");
-        p.innerHTML = alert("Longitud máxima del mensaje: 200");
+        p.innerHTML = alert("Error. La Longitud máxima del mensaje es de 200 caracteres");
         hubo_error = true;
     }
 
-    if (f_email.value == "" && !reg_correo.test(f_email.value)) {
-        //if(!/^([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)?$/{
-        f_email.classList.add("error");
-        let p = document.createElement("p");
-        p.innerHTML = alert("Email inválido");
-        hubo_error = true;
-    }
-
-    if (hubo_error) {
-        lta_errores.style.display = "initial";
-        return false;
+    if (reg_correo.test(f_email.value)) {
+        alert('Su mensaje se envio correctamente.');
+        alert('Gracias por elegirnos. En las proximas horas, un representante se contactara con Usted.')
+        return true;
     } else {
-        let p = document.createElement("p");
-        p.innerHTML=alert("Mensaje enviado con exito")
-        document.forms["f_contacto"].reset();
-        let primero = document.querySelector("form input");
-        primero.focus();
+        alert('Email invalido. Reintentar.');
+        return false;
     }
-    return false;
 }
