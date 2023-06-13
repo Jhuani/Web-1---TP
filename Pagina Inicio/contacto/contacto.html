@@ -8,7 +8,7 @@
     <title>ARGENTINA TRAVEL CO.</title>
     <link rel="shortcut icon" href="media/logo1.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="Menu.css">
-    <script src="Formu.js"></script>
+    <script src="form.js"></script>
     <script>
         function startTime() {
             today = new Date();
@@ -90,12 +90,11 @@
             <ul class="menu" style="font-size: 25px;">
                 <li><a href="../Inicio.html">Home</a></li>
                 <li><a href="../quienes-somos/quienes-somos.html">Quienes somos</a></li>
-                <li><a href="../preguntas-frecuentes/preguntas.html" >Preguntas Frecuentes</a></li>
+                <li><a href="../preguntas-frecuentes/preguntas.html">Preguntas Frecuentes</a></li>
                 <li><a href="../promos/promos.html">Promos</a></li>
-                <li><a href="../destinos/destinos.html" >Destinos</a></li>
+                <li><a href="../destinos/destinos.html">Destinos</a></li>
                 <li><a href="../pagos/pagos.html">Medios de Pago</a></li>
                 <li><a href="../contacto/contacto.html" class="active">Contactos</a></li>
-                <li><a href="../sumate/sumate.html">¡Sumate a nuestro equipo!</a></li>
             </ul>
         </div>
     </header>
@@ -105,28 +104,40 @@
         <h3></h3>
         <h1>Contactanos</h1>
         <p><b>Si desea recibir informacion complete el siguiente formulario</b></p>
-        <form onsubmit="return validar()" id="f_contacto">
-            <label for="f_nombre">NOMBRE</label>
-            <input id="f_nombre" size="90" autofocus />
-            <label for="f_apellido">APELLIDO</label>
-            <input id="f_apellido" size="90" />
-            <label for="f_mensaje">MENSAJE (Max. 200 caracteres)</label>
-            <textarea id="f_mensaje" style="width:600px; height:150px;"></textarea>
-            <label for="f_email">EMAIL</label>
-            <input id="f_email" size="90" />
+        <form action="" id="datos" onsubmit="registro(event)">
+            <div>
+                <label for="f_nombre">NOMBRE</label>
+                <input id="f_nombre" size="90" autofocus />
+            </div>
+            <div>
+                <label for="f_apellido">APELLIDO</label>
+                <input id="f_apellido" size="90" />
+            </div>
+            <div>
+                <label for="f_mensaje">MENSAJE (Max. 200 caracteres)</label>
+                <textarea id="f_mensaje" style="width:600px; height:150px;"></textarea>
+            </div>
+            <div>
+                <label for="f_email">EMAIL</label>
+                <input id="f_email" size="90" />
+            </div>
             <br>
             <input type="image" src="../iconos/enviar.png" alt="ENVIAR" width="48" height="48">
-            <div id="errores">
-            </div>
+            <br>
         </form>
-        <p><b>Tambien puede enviar un mail a info@argentinatravel.com.ar ó llame al Tel: (+54) 266-5020676. </p>
-        <p><b>Ademas contamos con servicio de mensaje directo mediante whatsapp haciendo <a
-                    href="https://api.whatsapp.com/" target="_blank">clic aquí <img
-                        src="../iconos/whatsapp_chat_message_communication_icon_193327.png" alt="Facebook" width="40px"
-                        height="40px"></a></p>
-        <p>¡Tu consulta no nos molesta!</p>
-        <br>
-        <h3></h3>
+        <div id="errores"></div>
+        <div id="msjFinal">
+            <p id="registroExitoso"></p>
+        </div>
+    </div>
+
+    <p><b>Tambien puede enviar un mail a info@argentinatravel.com.ar ó llame al Tel: (+54) 266-5020676. </p>
+    <p><b>Ademas contamos con servicio de mensaje directo mediante whatsapp haciendo <a href="https://api.whatsapp.com/"
+                target="_blank">clic aquí <img src="../iconos/whatsapp_chat_message_communication_icon_193327.png"
+                    alt="Facebook" width="40px" height="40px"></a></p>
+    <p>¡Tu consulta no nos molesta!</p>
+    <br>
+    <h3></h3>
     </div>
     <a href="#arriba"><img src="../media/Flecha Arriba.png" alt="Principio" width="50px" height="50px"></a>
 </body>

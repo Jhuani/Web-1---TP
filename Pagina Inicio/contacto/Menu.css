@@ -70,12 +70,6 @@ h2 {
     align-items: center;
 }
 
-.contador {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
 
 .contenido {
     text-align: justify;
@@ -158,6 +152,7 @@ h3::after {
 body {
     font-family: 'Lucida Sans';
 }
+
 /*formulario*/
 form {
     background: rgb(245, 229, 122);
@@ -170,24 +165,52 @@ form {
     margin: 10px;
     border: 3px solid rgb(49, 48, 31);
     border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 3px;
+    /*border: 1px solid #ccc;*/
+    border: 5px solid black;
+}
+
+
+label {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 textarea {
-    border: 2px solid black;
+    border: 5px solid black;
     border-radius: 0px 15px 0px 15px;
 }
 
-#errores {
-    border: 1px solid red;
-    padding: 5px;
-    display: none;
-}
-
-#errores p {
-    color: red;
+#boton {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
 }
 
 .error {
-    border: 1px solid red;
+    border: 2px solid red;
 }
+
+#errores {
+    display: none;
+    background-color: #a41212;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+}
+
+#msjFinal {
+    display: none;
+    text-align: center;
+    margin-top: 50px;
+    color: green;
+}
+
 /* fin formulario*/
